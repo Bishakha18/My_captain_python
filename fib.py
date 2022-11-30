@@ -1,19 +1,12 @@
-def febb(n):
-    if n==0 :
-        return 0
-    elif n==1:
-        return 1
-    else:
-        return febb(n-1)+febb(n-2)
-    
-
-
-n=int(input("enter the range of fibnacci series: "))
-p=0
+n = int(input("Enter number of terms: "))
+sum = 0
+carry1 = 0
+carry2 = 1
 for i in range(n):
-    p= febb(i)
-    if i == n-1:
-        print(f"{p} ",end ="")
-        break
-    print(f"{p}, ",end ="")
+    print(sum)
+    carry1 = carry2
+    carry2 = sum
+    sum = carry2 + carry1
+
+            
         
